@@ -85,6 +85,9 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
   flex-wrap: wrap;
 }
 
+.movie-title {
+  gap: 0.5rem;
+}
 .movie-rating {
   font-weight: bold;
   font-size: 0.9rem;
@@ -92,6 +95,7 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 .movie-votes {
   font-size: 0.9rem;
   font-weight: normal;
+  opacity: 0.7;
 }
 
 .toggle-details {

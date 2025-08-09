@@ -11,7 +11,7 @@
     <div class="movie-main">
       <span class="movie-title">{{ include.movie.title }}</span> 
       <span class="movie-rating">★ {{ include.movie.rating | round: 1 }}</span>
-      <span class="movie-votes">{{ include.movie.votes | number_with_delimiter }}</span>
+      <span class="movie-votes">({{ include.movie.votes | number_with_delimiter }})</span>
 
     </div>
 

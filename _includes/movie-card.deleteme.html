@@ -1,0 +1,41 @@
+<div class="movie-card">
+  <a href="{{ include.movie.imdb_url }}" target="_blank" rel="noopener">
+    <img
+      class="movie-poster"
+      src="{{ include.movie.poster_path }}"
+      alt="{{ include.movie.title }} poster"
+    />
+  </a>
+  <div
+    class="movie-header"
+    onclick="this.nextElementSibling.classList.toggle('collapsed'); this.querySelector('.toggle-arrow').classList.toggle('rotated');"
+    style="cursor:pointer; user-select:none;"
+  >
+    <span class="movie-title">{{ include.movie.title }} ({{ include.movie.year }})</span>
+    <span class="movie-rating">
+      {{ include.movie.rating | round: 1 }} ★
+    </span>
+    <span class="toggle-arrow" aria-label="Toggle details" style="display:inline-block; transition: transform 0.3s;">&#9654;</span>
+  </div>
+  <div
+    class="movie-details collapsed"
+    style="display:none; margin-top: 0.5rem;"
+  >
+    <p><strong>MPAA Rating:</strong> {{ include.movie.mpaa_rating }}</p>
+    <p><strong>Runtime:</strong> {{ include.movie.runtime }}</p>
+    <p><strong>Votes:</strong> {{ include.movie.votes }}</p>
+    <p><strong>Genres:</strong> {{ include.movie.genres | join: ", " }}</p>
+    <p>{{ include.movie.overview }}</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.movie-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const details = header.nextElementSibling;
+      details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
+      const arrow = header.querySelector('.toggle-arrow');
+      arrow.style.transform = arrow.style.transform === 'rotate(90deg)' ? 'rotate(0deg)' : 'rotate(90deg)';
+    });
+  });
+</script>

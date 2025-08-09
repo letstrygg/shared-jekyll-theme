@@ -1,0 +1,39 @@
+/* Shared Jekyll Theme - minimal responsive styles with dark/light variables */
+:root {
+  --bg: #0b0b0d;
+  --panel: #111214;
+  --text: #e6e6e6;
+  --muted: #bfbfbf;
+  --accent: #7dd3fc;
+}
+:root[data-theme='light'] {
+  --bg: #ffffff;
+  --panel: #f4f4f6;
+  --text: #0b0b0d;
+  --muted: #4b5563;
+  --accent: #0369a1;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+body{background:var(--bg);color:var(--text);line-height:1.5;transition:background .25s,color .25s;}
+.container{max-width:1100px;margin:2rem auto;padding:0 1rem;}
+.site-header{background:var(--panel);padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,0.03);position:sticky;top:0;z-index:40;}
+.site-header .inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 1rem;}
+.brand h1{margin:.2rem 0;font-size:1.1rem;}
+.brand .tagline{margin:0;font-size:.85rem;color:var(--muted);}
+.actions{display:flex;align-items:center;gap:.5rem;}
+.theme-toggle{background:transparent;border:0;padding:.35rem;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s;}
+.theme-toggle .icon{font-size:1.05rem;display:inline-block;transition:transform .35s;opacity:0;}
+[data-theme='dark'] .theme-toggle .moon{opacity:1;transform:rotate(0deg);}
+[data-theme='light'] .theme-toggle .sun{opacity:1;transform:rotate(0deg);}
+
+/* Grid for cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:1rem;}
+.card{background:var(--panel);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);}
+.card h3{margin:.25rem 0;font-size:1rem;}
+.card p{color:var(--muted);margin:0;font-size:.9rem;}
+
+/* Footer */
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:3rem;}
+a{color:var(--accent);text-decoration:none;}
+@media (max-width:600px){ .brand h1{font-size:1rem} }

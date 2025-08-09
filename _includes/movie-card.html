@@ -18,10 +18,10 @@
     <div class="movie-meta">
       <span class="movie-year">{{ include.movie.year }}</span>
       {% if include.movie.mpaa_rating %}
-      <span>·</span>
+      <span class="dot">·</span>
         <span class="movie-mpaa">{{ include.movie.mpaa_rating }}</span>
       {% endif %}
-      <span>·</span>
+      <span class="dot">·</span>
       <span class="movie-runtime">{{ include.movie.runtime | replace: ' min', 'm' }}</span>
 
     </div>

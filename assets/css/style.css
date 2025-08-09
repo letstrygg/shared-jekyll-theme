@@ -22,7 +22,7 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 .brand h1{margin:.2rem 0;font-size:1.1rem;}
 .brand .tagline{margin:0;font-size:.85rem;color:var(--muted);}
 .actions{display:flex;align-items:center;gap:.5rem;}
-.theme-toggle{background:transparent;border:0;padding:.35rem;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s;}
+.theme-toggle{background:transparent;border:0;padding:.35rem;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:transform .25s;}
 .theme-toggle .icon{font-size:1.05rem;display:inline-block;transition:transform .35s;opacity:0;}
 [data-theme='dark'] .theme-toggle .moon{opacity:1;transform:rotate(0deg);}
 [data-theme='light'] .theme-toggle .sun{opacity:1;transform:rotate(0deg);}

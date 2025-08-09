@@ -67,7 +67,7 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 
 .movie-main {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5rem;
   font-weight: bold;
   font-size: 1.05rem;
 }

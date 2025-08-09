@@ -10,16 +10,19 @@
   <div class="movie-info">
     <div class="movie-main">
       <span class="movie-title">{{ include.movie.title }}</span> 
-      <span class="movie-year">({{ include.movie.year }})</span>
+      <span class="movie-rating">★ {{ include.movie.rating | round: 1 }}</span>
+      <span class="movie-votes">{{ include.movie.votes | number_with_delimiter }}</span>
+
     </div>
 
     <div class="movie-meta">
-      <span class="movie-rating">{{ include.movie.rating | round: 1 }} ★</span>
-      <span class="movie-votes">{{ include.movie.votes | number_with_delimiter }}</span>
-      <span class="movie-runtime">{{ include.movie.runtime | replace: ' min', 'm' }}</span>
+      <span class="movie-year">({{ include.movie.year }})</span>
       {% if include.movie.mpaa_rating %}
-        <span class="movie-mpaa">{{ include.movie.mpaa_rating }}</span>
+        <span class="movie-mpaa"> · {{ include.movie.mpaa_rating }} · </span>
       {% endif %}
+
+      <span class="movie-runtime">{{ include.movie.runtime | replace: ' min', 'm' }}</span>
+
     </div>
 
     <button class="toggle-details" onclick="this.parentElement.nextElementSibling.classList.toggle('collapsed'); this.classList.toggle('rotated');">

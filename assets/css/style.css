@@ -84,7 +84,7 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 .movie-details p {
   margin: 0.25rem 1rem;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--text);
 }
 
 .movie-details.collapsed {

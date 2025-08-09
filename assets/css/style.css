@@ -65,11 +65,13 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 
 .movie-title {
   flex-grow: 1;
+  text-align: left;
 }
 
 .movie-rating {
   margin-left: 0.5rem;
   white-space: nowrap;
+  font-weight: normal;
 }
 
 .toggle-arrow {
@@ -87,6 +89,7 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 .movie-details.collapsed {
   display: none;
 }
+
 
 
 

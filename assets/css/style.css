@@ -98,6 +98,18 @@ body{background:var(--bg);color:var(--text);line-height:1.5;transition:backgroun
 
 
 /* Footer */
-.site-footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:3rem;}
-a{color:var(--accent);text-decoration:none;}
-@media (max-width:600px){ .brand h1{font-size:1rem} }
+.site-footer {
+  padding:2rem 0;
+  text-align:center;color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.03);
+  margin-top:3rem;
+}
+
+a {
+  color:var(--accent);
+  text-decoration:none;
+}
+
+@media (max-width:600px) {
+  .brand h1{font-size:1rem} 
+}
